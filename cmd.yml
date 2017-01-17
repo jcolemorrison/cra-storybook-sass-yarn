@@ -1,25 +1,28 @@
 version: '2'
 
 services:
+  # the name of our service that will run the CRA, docker-compose will reference it as web
   web:
     environment:
       NODE_ENV: development
-    image: jcolemorrison/cra-storybook-dev
+    image: jcolemorrison/cra-storybook-dev # the image used for the service
     ports:
       - 3001:3000 # app will be at 3001
     volumes:
-      - ./app:/usr/src/app
-
+      - ./app:/usr/src/app # map our app directory to the volumes app working directory
+  
+  # the name of our service that will run storybook, docker-compose will reference it as story
   story:
     environment:
       NODE_ENV: development
-    image: jcolemorrison/cra-storybook-dev
+    image: jcolemorrison/cra-storybook-dev # the image used for the service
     ports:
       - 3009:9009 # storybook will be at 3009
     volumes:
-      - ./app:/usr/src/app
+      - ./app:/usr/src/app # map our app directory to the volumes app working directory
 
+  # the name of our service that will run SASS, docker-compose will reference it as sass
   sass:
-    image: jcolemorrison/sass-dev
+    image: jcolemorrison/sass-dev # the image used for the service
     volumes:
-      - ./app:/usr/src/app
+      - ./app:/usr/src/app # map our app directory to the volumes app working directory

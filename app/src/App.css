@@ -1,11 +1,3 @@
-.widget {
-  background-color: #CC7A6F;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  width: 50%;
-  margin: 0 auto; }
-
 .App {
   text-align: center; }
 
@@ -27,5 +19,12 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+.widget {
+  background-color: #CC7A6F;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=App.css.map */
