@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  web:
+    environment:
+      NODE_ENV: development
+    image: jcolemorrison/cra-storybook-dev
+    ports:
+      - 3001:3000 # app will be at 3001
+    volumes:
+      - ./app:/usr/src/app
+
+  story:
+    environment:
+      NODE_ENV: development
+    image: jcolemorrison/cra-storybook-dev
+    ports:
+      - 3009:9009 # storybook will be at 3009
+    volumes:
+      - ./app:/usr/src/app
+
+  sass:
+    image: jcolemorrison/sass-dev
+    volumes:
+      - ./app:/usr/src/app

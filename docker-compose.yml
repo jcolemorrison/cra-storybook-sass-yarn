@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  web:
+    extends:
+      file: cmd.yml
+      service: web
+    command: yarn start
+
+  story:
+    extends:
+      file: cmd.yml
+      service: story
+    command: yarn run storybook
+
+  sass:
+    extends:
+      file: cmd.yml
+      service: sass
+    command: sass --watch /usr/src/app/src:/usr/src/app/src
