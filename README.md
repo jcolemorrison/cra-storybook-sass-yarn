@@ -4,6 +4,8 @@ This is the supporting codebase to the tutorial - [No Eject - Create React App w
 
 To start it:
 
+Build the images in the `docker-images` with `docker-build -t <name>` and then change the `cmd.yml` and `docker-compose.yml` file with the `<name>`.
+
 a) pull down the repo
 
 b) in the root directory run `docker-compose run web yarn` to install the `node_modules`
