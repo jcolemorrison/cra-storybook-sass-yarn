@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import Widget from './components/widget/'
+import Another from './components/another/another.js'
+import Something from './components/widget/something.js'
 
 class App extends Component {
   render() {
@@ -14,6 +16,8 @@ class App extends Component {
         </div>
         <p className="App-intro">
           <Widget />
+          <Another />
+          <Something />
         </p>
       </div>
     );

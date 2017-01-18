@@ -4,13 +4,13 @@ This is the supporting codebase to the tutorial - [No Eject - Create React App w
 
 To start it:
 
-Build the images in the `docker-images` with `docker-build -t <name>` and then change the `cmd.yml` and `docker-compose.yml` file with the `<name>`.
-
 a) pull down the repo
 
-b) in the root directory run `docker-compose run web yarn` to install the `node_modules`
+b) Build the images in the `docker-images` with `docker-build -t <name>` and then change the `cmd.yml` and `docker-compose.yml` file with the `<name>`.  i.e. `docker-build -t trial/cra-storybook-dev ./docker-images/cra-storybook` and `docker-build -t trial/sass-dev ./docker-images/sass-dev-image`
 
-c) once installed, run `docker-compose up -d`
+c) in the root directory run `docker-compose run web yarn` to install the `node_modules`
+
+d) once installed, run `docker-compose up -d`
 
 - the react application will be available at `localhost:3001`
 - the react storybook willl be available at `localhost:3009`
