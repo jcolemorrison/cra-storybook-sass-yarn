@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Widget from './components/widget/'
-import Another from './components/another/another.js'
+import Another from './components/another/'
 import Something from './components/widget/something.js'
 
 class App extends Component {
