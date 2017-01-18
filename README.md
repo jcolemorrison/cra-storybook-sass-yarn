@@ -6,7 +6,11 @@ To start it:
 
 a) pull down the repo
 
-b) Build the images in the `docker-images` with `docker-build -t <name>` and then change the `cmd.yml` and `docker-compose.yml` file with the `<name>`.  i.e. `docker-build -t trial/cra-storybook-dev ./docker-images/cra-storybook` and `docker-build -t trial/sass-dev ./docker-images/sass-dev-image`
+b) Build the images in the `docker-images` with `docker-build -t <name>` and then change the `cmd.yml` and `docker-compose.yml` file with the `<name>`.
+
+i.e. `docker-build -t trial/cra-storybook-dev ./docker-images/cra-storybook` and `docker-build -t trial/sass-dev ./docker-images/sass-dev-image`
+
+Alternatively just `docker pull` down the images `jcolemorrison/cra-storybook-dev` and `jcolemorrison/sass-dev`.
 
 c) in the root directory run `docker-compose run web yarn` to install the `node_modules`
 
